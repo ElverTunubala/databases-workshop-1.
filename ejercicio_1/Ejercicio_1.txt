@@ -1,0 +1,79 @@
+
+-Identificación de Entidades y Atributos
+
+-Entidades:
+1. Libro
+2. Usuario
+3. Préstamo
+
+Atributos de cada entidad:
+
+1. Libro
+- ID de Libro (PK)
+- Título
+- Autor
+- Fecha de Publicación
+
+- ISBN (número único de identificación)
+- Editorial
+
+2. Usuario
+- ID de Usuario (PK)
+- Nombre
+- Dirección
+- Email
+
+- Teléfono
+- Fecha de Registro
+
+3. Préstamo
+- ID de Préstamo (PK)
+- ID de Usuario (FK)
+- ID de Libro (FK)
+- Fecha de Préstamo
+- Fecha de Devolución
+
+- Estado del Préstamo (por ejemplo: pendiente, devuelto)
+- Multa (si aplica)
+
+ Determinación de Claves
+
+Claves Primarias (PK):
+- Libro: ID de Libro
+- Usuario: ID de Usuario
+- Préstamo: ID de Préstamo
+
+Claves Foráneas (FK):
+- Préstamo: ID de Usuario (relación con la entidad Usuario)
+- Préstamo: ID de Libro (relación con la entidad Libro)
+
+ Esquema E-R
+
+- Entidades:
+  - Libro
+    - ID de Libro (PK)
+    - Título
+    - Autor
+    - Fecha de Publicación
+    - ISBN
+    - Editorial
+  - Usuario
+    - ID de Usuario (PK)
+    - Nombre
+    - Dirección
+    - Email
+    - Teléfono
+    - Fecha de Registro
+  - Préstamo
+    - ID de Préstamo (PK)
+    - ID de Usuario (FK)
+    - ID de Libro (FK)
+    - Fecha de Préstamo
+    - Fecha de Devolución
+    - Estado del Préstamo
+    - Multa
+
+- Relaciones:
+  - Préstamo
+    - Relación entre Usuario y Préstamo: Un Usuario puede tener múltiples Préstamos (1 a N)
+    - Relación entre Libro y Préstamo: Un Libro puede estar en múltiples Préstamos (1 a N)

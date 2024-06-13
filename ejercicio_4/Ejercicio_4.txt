@@ -1,0 +1,164 @@
+ Ejercicio 4: Casos Adicionales para Practicar y Afianzar el Aprendizaje
+
+1. Sistema de Gestión de Ventas
+
+Descripción:
+
+En una tienda, cada producto tiene un nombre y un precio. Los clientes realizan pedidos, y cada pedido puede incluir varios productos. Un cliente puede hacer muchos pedidos, y cada pedido pertenece a un único cliente.
+
+Entidades y Atributos:
+
+1. Producto
+- ID de Producto (PK)
+- Nombre
+- Precio
+
+2. Cliente
+- ID de Cliente (PK)
+- Nombre
+- Dirección
+- Email
+
+3. Pedido
+- ID de Pedido (PK)
+- ID de Cliente (FK)
+- Fecha de Pedido
+
+4. Detalle de Pedido
+- ID de Detalle (PK)
+- ID de Pedido (FK)
+- ID de Producto (FK)
+- Cantidad
+
+Cardinalidades:
+- Un Cliente puede hacer muchos Pedidos (1 a N).
+- Un Pedido puede incluir muchos Productos (1 a N).
+- Un Producto puede estar en muchos Pedidos (N a N).
+
+
+2. Sistema de Gestión de Hospital
+
+Descripción:
+
+En un hospital, cada paciente puede tener citas con varios médicos. Los médicos pueden atender a muchos pacientes. Cada cita incluye la fecha de la cita y el diagnóstico.
+
+Entidades y Atributos:
+
+1. Paciente
+- ID de Paciente (PK)
+- Nombre
+- Dirección
+- Fecha de Nacimiento
+
+2. Médico
+- ID de Médico (PK)
+- Nombre
+- Especialidad
+
+3. Cita
+- ID de Cita (PK)
+- ID de Paciente (FK)
+- ID de Médico (FK)
+- Fecha de Cita
+- Diagnóstico
+
+Cardinalidades:
+- Un Paciente puede tener muchas Citas (1 a N).
+- Un Médico puede atender a muchos Pacientes (1 a N).
+- Una Cita pertenece a un único Paciente y un único Médico (N a 1).
+
+
+
+3. Sistema de Gestión de Universidad
+
+Descripción:
+
+En una universidad, los estudiantes se inscriben en cursos. Cada curso tiene un nombre y un código. Los estudiantes pueden estar inscritos en muchos cursos, y cada curso puede tener muchos estudiantes inscritos.
+
+Entidades y Atributos:
+1. Estudiante
+- ID de Estudiante (PK)
+- Nombre
+- Email
+- Fecha de Inscripción
+
+2. Curso
+- ID de Curso (PK)
+- Nombre
+- Código
+
+3. Inscripción
+- ID de Inscripción (PK)
+- ID de Estudiante (FK)
+- ID de Curso (FK)
+- Fecha de Inscripción
+
+Cardinalidades:
+- Un Estudiante puede inscribirse en muchos Cursos (1 a N).
+- Un Curso puede tener muchos Estudiantes inscritos (1 a N).
+- Una Inscripción pertenece a un único Estudiante y un único Curso (N a 1).
+
+
+ 4. Sistema de Gestión de Recursos Humanos
+
+Descripción:
+
+En una empresa, los empleados trabajan en proyectos. Cada proyecto tiene un nombre y una fecha de inicio. Un empleado puede trabajar en varios proyectos, y cada proyecto puede tener varios empleados asignados.
+
+Entidades y Atributos:
+
+1. Empleado
+- ID de Empleado (PK)
+- Nombre
+- Departamento
+- Email
+
+2. Proyecto
+- ID de Proyecto (PK)
+- Nombre
+- Fecha de Inicio
+
+3. Asignación
+- ID de Asignación (PK)
+- ID de Empleado (FK)
+- ID de Proyecto (FK)
+- Rol
+- Fecha de Asignación
+
+Cardinalidades:
+- Un Empleado puede trabajar en muchos Proyectos (1 a N).
+- Un Proyecto puede tener muchos Empleados asignados (1 a N).
+- Una Asignación pertenece a un único Empleado y un único Proyecto (N a 1).
+
+
+5. Sistema de Gestión de Inventario
+
+Descripción:
+
+En un almacén, los productos son suministrados por proveedores. Cada producto tiene un nombre y una cantidad en stock. Un proveedor puede suministrar muchos productos, y cada producto puede ser suministrado por varios proveedores.
+
+Entidades y Atributos:
+
+1. Producto
+- ID de Producto (PK)
+- Nombre
+- Cantidad en Stock
+
+2. Proveedor
+- ID de Proveedor (PK)
+- Nombre
+- Dirección
+- Teléfono
+
+3. Suministro
+- ID de Suministro (PK)
+- ID de Proveedor (FK)
+- ID de Producto (FK)
+- Fecha de Suministro
+- Cantidad Suministrada
+
+Cardinalidades:
+- Un Proveedor puede suministrar muchos Productos (1 a N).
+- Un Producto puede ser suministrado por muchos Proveedores (1 a N).
+- Un Suministro pertenece a un único Proveedor y un único Producto (N a 1).
+

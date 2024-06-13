@@ -1,0 +1,109 @@
+
+
+Ejemplo 1: Sistema de Gestión de Eventos
+
+Descripción:
+
+En un sistema de gestión de eventos, las personas pueden registrarse para asistir a varios eventos. Cada evento tiene un título, una fecha y una ubicación. Las personas tienen un nombre, un email y un número de teléfono. Cada registro de asistencia incluye la fecha de registro.
+
+Entidades y Atributos:
+
+1. Persona
+- ID de Persona (PK)
+- Nombre
+- Email
+- Teléfono
+
+2. Evento
+- ID de Evento (PK)
+- Título
+- Fecha
+- Ubicación
+
+3. Registro
+- ID de Registro (PK)
+- ID de Persona (FK)
+- ID de Evento (FK)
+- Fecha de Registro
+
+Cardinalidades:
+- Una Persona puede registrarse para muchos Eventos (1 a N).
+- Un Evento puede tener muchos Registros de Personas (1 a N).
+
+Ejemplo 2: Sistema de Gestión de Cursos en Línea
+
+Descripción:
+
+En un sistema de gestión de cursos en línea, los estudiantes pueden inscribirse en varios cursos. Cada curso tiene un nombre, un instructor y una duración. Los estudiantes tienen un nombre, un email y una fecha de inscripción.
+
+Entidades y Atributos:
+
+1. Estudiante
+- ID de Estudiante (PK)
+- Nombre
+- Email
+- Fecha de Inscripción
+
+2. Curso
+- ID de Curso (PK)
+- Nombre
+- Instructor
+- Duración
+
+3. Inscripción
+- ID de Inscripción (PK)
+- ID de Estudiante (FK)
+- ID de Curso (FK)
+- Fecha de Inscripción
+
+Cardinalidades:
+- Un Estudiante puede inscribirse en muchos Cursos (1 a N).
+- Un Curso puede tener muchos Estudiantes inscritos (1 a N).
+
+
+Ejemplo 3: Sistema de Gestión de Proyectos
+
+Descripción:
+
+En un sistema de gestión de proyectos, los empleados pueden trabajar en varios proyectos. Cada proyecto tiene un nombre, una fecha de inicio y una fecha de finalización. Los empleados tienen un nombre, un email y un departamento.
+
+Entidades y Atributos:
+
+1. Empleado
+- ID de Empleado (PK)
+- Nombre
+- Email
+- Departamento
+
+2. Proyecto
+- ID de Proyecto (PK)
+- Nombre
+- Fecha de Inicio
+- Fecha de Finalización
+
+3. Asignación
+- ID de Asignación (PK)
+- ID de Empleado (FK)
+- ID de Proyecto (FK)
+- Fecha de Asignación
+- Rol
+
+Cardinalidades:
+- Un Empleado puede trabajar en muchos Proyectos (1 a N).
+- Un Proyecto puede tener muchos Empleados asignados (1 a N).
+
+Explicación de las Decisiones Tomadas
+
+1. Identificación de Entidades:
+   - Cada ejemplo se basa en un escenario realista donde se pueden identificar claramente las entidades principales involucradas, como Persona, Evento, Estudiante, Curso, Empleado, y         Proyecto.
+
+2. Definición de Atributos:
+   - Los atributos se eligen para describir de manera adecuada cada entidad, asegurando que se capturen los datos más relevantes para la gestión del sistema.
+
+3. Determinación de Relaciones:
+   - Las relaciones se establecen según las interacciones naturales entre las entidades. Se utiliza la cardinalidad adecuada (1 a N) para reflejar la realidad, donde una entidad puede        estar asociada con múltiples instancias de otra entidad.
+
+4. Uso de Claves Primarias y Foráneas:
+   - Las claves primarias (PK) se utilizan para identificar de manera única cada registro en las tablas de las entidades.
+   - Las claves foráneas (FK) se utilizan para establecer y mantener las relaciones entre las entidades, asegurando la integridad referencial.
+
